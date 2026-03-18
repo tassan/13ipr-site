@@ -1,0 +1,49 @@
+name: 13ipr
+
+services:
+
+  # ── Next.js — Site principal (porta 3000) ─────────────────
+  nextjs:
+    build:
+      context: ./nextjs-13ipr-site
+      dockerfile: Dockerfile.dev
+    container_name: 13ipr-nextjs
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./nextjs-13ipr-site/.env.local
+    volumes:
+      - ./nextjs-13ipr-site:/app
+      - /app/node_modules
+      - nextjs_cache:/app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - WATCHPACK_POLLING=true
+    networks:
+      - ipr-net
+
+  # ── Sanity Studio — Painel de conteúdo (porta 3333) ───────
+  studio:
+    build:
+      context: ./studio-13ipr-site
+      dockerfile: Dockerfile.dev
+    container_name: 13ipr-studio
+    restart: unless-stopped
+    ports:
+      - "3333:3333"
+    env_file:
+      - ./studio-13ipr-site/.env
+    volumes:
+      - ./studio-13ipr-site:/app
+      - /app/node_modules
+    networks:
+      - ipr-net
+
+networks:
+  ipr-net:
+    driver: bridge
+
+volumes:
+  nextjs_cache:

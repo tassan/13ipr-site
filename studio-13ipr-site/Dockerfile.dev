@@ -1,0 +1,12 @@
+FROM node:20-alpine
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+
+COPY package.json package-lock.json* ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 3333
+# Sanity dev escuta em 0.0.0.0 para ser acessível fora do container
+CMD ["npx", "sanity", "dev", "--port", "3333", "--host", "0.0.0.0"]

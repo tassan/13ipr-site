@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts ─────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+
+/* ─── CSS Variables ─────────────────────────────────────── */
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-jost: 'Jost', system-ui, sans-serif;
+
+  --color-bg: #FAFAF8;
+  --color-surface: #F0EFE9;
+  --color-stone: #E8E5DE;
+  --color-navy: #1B2A4A;
+  --color-navy-dark: #111C30;
+  --color-gold: #C9913A;
+  --color-gold-light: #E0B06A;
+  --color-text: #2D2D2D;
+  --color-text-muted: #6B6B6B;
+}
+
+/* ─── Base ──────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-jost);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography ─────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* ─── Gold Divider ────────────────────────────────────────── */
+.gold-divider {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--color-gold);
+  margin: 1rem 0;
+}
+
+.gold-divider--center {
+  margin: 1rem auto;
+}
+
+/* ─── Section Label ───────────────────────────────────────── */
+.section-label {
+  font-family: var(--font-jost);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* ─── Texture overlay ─────────────────────────────────────── */
+.texture-overlay {
+  position: relative;
+}
+
+.texture-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ─── Animations ──────────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.animate-fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.animate-fade-up-delay-2 { animation-delay: 0.25s; opacity: 0; }
+.animate-fade-up-delay-3 { animation-delay: 0.4s; opacity: 0; }
+.animate-fade-up-delay-4 { animation-delay: 0.55s; opacity: 0; }
+
+/* ─── Portable Text (Sanity) ─────────────────────────────── */
+.prose-church p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.prose-church strong {
+  font-weight: 600;
+  color: var(--color-navy);
+}

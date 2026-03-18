@@ -1,0 +1,23 @@
+{
+  "name": "studio-13ipr-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "start": "sanity start",
+    "manage": "sanity manage"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sanity": "^3.30.0",
+    "@sanity/vision": "^3.30.0"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^4.0.0",
+    "eslint": "^8.6.0",
+    "typescript": "^5.1.6"
+  }
+}
