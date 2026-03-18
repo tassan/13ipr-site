@@ -138,9 +138,9 @@ export default function ContatoPage() {
             <div className="border border-stone overflow-hidden">
               <iframe
                 title="Localização 13ª IPR Cidade Nova"
-                src="https://www.google.com/maps?cid=4566480430851867757&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAEYASAB&hl=pt-BR&source=embed"
-                width="100%"
-                height="280"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.28435332845!2d-41.9691839!3d-18.830020299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb1a75283edfccf%3A0x3f5f65c1f2b2c46d!2sIPR%20-%20CIDADE%20NOVA!5e0!3m2!1spt-BR!2sbr!4v1773870068349!5m2!1spt-BR!2sbr"
+                width="600"
+                height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
