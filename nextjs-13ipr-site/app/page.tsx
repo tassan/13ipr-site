@@ -10,6 +10,9 @@ const CULTOS_FALLBACK = [
   { tipo: "Culto de Oração", diaSemana: "Quarta-feira", horario: "19h30" },
 ];
 
+// ISR: revalida periodicamente para puxar conteúdo do Sanity
+export const revalidate = 60;
+
 export default async function HomePage() {
   const [avisos, cultosDB, eventos] = await Promise.all([
     getAvisos(4),

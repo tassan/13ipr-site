@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     "Conheça o Pr. Wilson Brito e o Pr. Uziel Pacheco, a liderança pastoral da 13ª IPR Cidade Nova.",
 };
 
+export const revalidate = 60; // ISR: revalida a cada 60s
+
 // Fallback estático enquanto o Sanity não está populado
 const PASTORES_FALLBACK = [
   {
