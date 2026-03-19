@@ -39,7 +39,7 @@ export default function Navbar() {
               scrolled ? "text-navy" : "text-white"
             }`}
           >
-            13ª IPR
+            IPR
           </span>
           <span
             className={`text-xs font-sans font-light tracking-widest uppercase transition-colors ${

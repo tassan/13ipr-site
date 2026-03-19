@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "A Igreja",
   description:
-    "Conheça a história, visão e missão da 13ª Igreja Presbiteriana Renovada – Cidade Nova, GV.",
+    "Conheça a história, visão e missão da Igreja Presbiteriana Renovada – Cidade Nova, GV.",
 };
 
 const valores = [

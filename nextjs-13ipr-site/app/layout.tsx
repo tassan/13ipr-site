@@ -6,10 +6,10 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: {
     default: "13ª IPR Cidade Nova | Governador Valadares",
-    template: "%s | 13ª IPR Cidade Nova",
+    template: "%s | IPR Cidade Nova",
   },
   description:
-    "Décima Terceira Igreja Presbiteriana Renovada, bairro Cidade Nova, Governador Valadares – MG. Uma igreja da família e da Palavra.",
+    "Igreja Presbiteriana Renovada, bairro Cidade Nova, Governador Valadares – MG. Uma igreja da família e da Palavra.",
   keywords: [
     "Igreja Presbiteriana Renovada",
     "Governador Valadares",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    siteName: "13ª IPR Cidade Nova",
+    siteName: "IPR Cidade Nova",
   },
 };
 

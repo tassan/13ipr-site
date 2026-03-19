@@ -5,7 +5,7 @@ import { MapPin, Phone, Clock, Instagram, Youtube } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Localização, horários e formas de contato da 13ª IPR Cidade Nova, Governador Valadares.",
+    "Localização, horários e formas de contato da IPR Cidade Nova, Governador Valadares.",
 };
 
 const cultos = [
@@ -111,7 +111,7 @@ export default function ContatoPage() {
                   </span>
                   <div className="flex flex-col gap-1">
                     <a
-                      href="https://instagram.com/13iprcidadenova"
+                      href="https://instagram.com/ipr.cidadenova"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm font-light hover:text-gold transition-colors flex items-center gap-2"
@@ -137,7 +137,7 @@ export default function ContatoPage() {
             {/* Google Maps embed */}
             <div className="border border-stone overflow-hidden">
               <iframe
-                title="Localização 13ª IPR Cidade Nova"
+                title="Localização IPR Cidade Nova"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3776.28435332845!2d-41.9691839!3d-18.830020299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb1a75283edfccf%3A0x3f5f65c1f2b2c46d!2sIPR%20-%20CIDADE%20NOVA!5e0!3m2!1spt-BR!2sbr!4v1773870068349!5m2!1spt-BR!2sbr"
                 width="600"
                 height="450"

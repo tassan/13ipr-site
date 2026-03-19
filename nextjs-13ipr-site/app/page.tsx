@@ -55,7 +55,7 @@ export default async function HomePage() {
 
           {/* Title */}
           <h1 className="font-serif text-white text-5xl md:text-7xl lg:text-8xl font-semibold mt-6 mb-2 leading-[1.0] animate-fade-up animate-fade-up-delay-2">
-            13ª Igreja
+            Igreja
             <br />
             <span className="text-gold">Presbiteriana</span>
             <br />

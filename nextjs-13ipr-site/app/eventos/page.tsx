@@ -5,7 +5,7 @@ import { CalendarDays, MapPin, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Eventos",
-  description: "Agenda e próximos eventos da 13ª IPR Cidade Nova, GV.",
+  description: "Agenda e próximos eventos da IPR Cidade Nova, GV.",
 };
 
 export const revalidate = 60;

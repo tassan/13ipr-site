@@ -7,7 +7,7 @@ import { urlFor } from "@/lib/sanity";
 export const metadata: Metadata = {
   title: "Pastores",
   description:
-    "Conheça o Pr. Wilson Brito e o Pr. Uziel Pacheco, a liderança pastoral da 13ª IPR Cidade Nova.",
+    "Conheça o Pr. Wilson Brito e o Pr. Uziel Pacheco, a liderança pastoral da IPR Cidade Nova.",
 };
 
 export const revalidate = 60; // ISR: revalida a cada 60s
@@ -20,7 +20,7 @@ const PASTORES_FALLBACK = [
     titulo: "Pastor Titular",
     foto: null,
     biografia:
-      "Nosso pastor titular, Pr. Wilson Brito, serve à 13ª Igreja Presbiteriana Renovada com dedicação e fidelidade ao Evangelho. Sua pregação é centrada na Palavra de Deus e no cuidado pastoral com cada família da congregação.",
+      "Nosso pastor titular, Pr. Wilson Brito, serve à Igreja Presbiteriana Renovada com dedicação e fidelidade ao Evangelho. Sua pregação é centrada na Palavra de Deus e no cuidado pastoral com cada família da congregação.",
     versiculo: "Apascenta o rebanho de Deus que está entre vós, cuidando dele, não por obrigação, mas de boa vontade.",
     versiculoReferencia: "1 Pedro 5:2",
     ordemExibicao: 1,

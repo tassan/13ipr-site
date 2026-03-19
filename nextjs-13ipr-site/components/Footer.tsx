@@ -11,14 +11,14 @@ export default function Footer() {
         {/* Col 1 — Identidade */}
         <div>
           <h3 className="font-serif text-2xl text-white font-medium mb-1">
-            13ª IPR Cidade Nova
+            IPR Cidade Nova
           </h3>
           <p className="text-gold text-sm font-light italic mb-4">
             "Uma igreja da família e da Palavra"
           </p>
           <p className="text-sm leading-relaxed">
-            Décima Terceira Igreja Presbiteriana Renovada, servindo a comunidade
-            do bairro Cidade Nova em Governador Valadares, MG.
+            Igreja Presbiteriana Renovada, servindo a comunidade do bairro Cidade Nova
+            em Governador Valadares, MG.
           </p>
         </div>
 
@@ -96,8 +96,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/40">
           <span>
-            © {new Date().getFullYear()} 13ª Igreja Presbiteriana Renovada –
-            Cidade Nova
+            © {new Date().getFullYear()} Igreja Presbiteriana Renovada – Cidade Nova
           </span>
           <span>Governador Valadares, MG</span>
         </div>
