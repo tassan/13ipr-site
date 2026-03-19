@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
+export const revalidate = 3600; // Cache sitemap for 1 hour
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
