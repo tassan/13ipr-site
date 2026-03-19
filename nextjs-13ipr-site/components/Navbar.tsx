@@ -1,8 +1,5 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 
 const links = [
   { href: "/", label: "Início" },
@@ -14,37 +11,18 @@ const links = [
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-stone"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm border-b border-stone transition-all duration-300">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo / Nome */}
         <Link href="/" className="flex flex-col leading-none group">
           <span
-            className={`font-serif text-xl font-semibold tracking-tight transition-colors ${
-              scrolled ? "text-navy" : "text-white"
-            }`}
+            className="font-serif text-xl font-semibold tracking-tight transition-colors text-navy"
           >
             IPR
           </span>
           <span
-            className={`text-xs font-sans font-light tracking-widest uppercase transition-colors ${
-              scrolled ? "text-gold" : "text-gold-light"
-            }`}
+            className="text-xs font-sans font-light tracking-widest uppercase transition-colors text-gold-light"
           >
             Cidade Nova · GV
           </span>
@@ -56,9 +34,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-sans font-medium tracking-wide transition-colors hover:text-gold ${
-                scrolled ? "text-navy/80" : "text-white/90"
-              }`}
+              className="text-sm font-sans font-medium tracking-wide transition-colors hover:text-gold text-navy/80"
             >
               {link.label}
             </Link>
@@ -66,34 +42,24 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile toggle */}
-        <button
-          className={`md:hidden p-1 transition-colors ${
-            scrolled ? "text-navy" : "text-white"
-          }`}
-          onClick={() => setOpen(!open)}
-          aria-label="Menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-      </div>
+        <details className="md:hidden">
+          <summary className="p-1 cursor-pointer list-none marker:hidden text-navy" aria-label="Menu">
+            <Menu size={22} />
+          </summary>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-white border-t border-stone shadow-lg">
-          <nav className="flex flex-col">
+          <nav className="bg-white border-t border-stone shadow-lg flex flex-col">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                onClick={() => setOpen(false)}
                 className="px-6 py-4 text-sm font-sans font-medium text-navy hover:bg-surface hover:text-gold border-b border-stone/50 last:border-0 transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
-        </div>
-      )}
+        </details>
+      </div>
     </header>
   );
 }

@@ -15,7 +15,8 @@
   --color-stone: #E8E5DE;
   --color-navy: #1B2A4A;
   --color-navy-dark: #111C30;
-  --color-gold: #C9913A;
+  /* Darker gold for better WCAG contrast on light backgrounds */
+  --color-gold: #A57228;
   --color-gold-light: #E0B06A;
   --color-text: #2D2D2D;
   --color-text-muted: #6B6B6B;

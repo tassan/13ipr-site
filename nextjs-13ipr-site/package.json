@@ -26,5 +26,16 @@
     "postcss": "^8",
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.0"
+  },
+  "browserslist": {
+    "production": [
+      "last 2 Chrome versions",
+      "last 2 Firefox versions",
+      "last 2 Safari versions",
+      "not dead"
+    ],
+    "development": [
+      "last 1 Chrome version"
+    ]
   }
 }
