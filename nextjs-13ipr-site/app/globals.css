@@ -1,15 +1,12 @@
-/* ─── Google Fonts ─────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap');
+/* Fonts carregados via next/font no layout (evita @import bloqueante) */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ─── CSS Variables ─────────────────────────────────────── */
+/* --font-cormorant e --font-jost injetados por next/font no layout */
 :root {
-  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
-  --font-jost: 'Jost', system-ui, sans-serif;
-
   --color-bg: #FAFAF8;
   --color-surface: #F0EFE9;
   --color-stone: #E8E5DE;

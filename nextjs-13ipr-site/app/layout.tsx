@@ -1,8 +1,30 @@
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import SpeedInsightsDeferred from "@/components/SpeedInsightsDeferred";
+
+// Footer: chunk separado (abaixo da dobra) — reduz bundle inicial
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: true });
+
+// Pesos reduzidos (300,400,500,600) — 700 não usado no site; menos arquivos = cadeia menor
+const cormorant = Cormorant_Garamond({
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+  preload: true,
+});
+
+const jost = Jost({
+  weight: ["300", "400", "500", "600"],
+  subsets: ["latin"],
+  variable: "--font-jost",
+  display: "swap",
+  preload: true,
+});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
@@ -79,8 +101,11 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="pt-BR">
-      <body className="flex flex-col min-h-screen bg-bg">
+    <html lang="pt-BR" className={`${cormorant.variable} ${jost.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="anonymous" />
+      </head>
+      <body className="flex flex-col min-h-screen bg-bg font-sans antialiased">
         <script
           type="application/ld+json"
           suppressHydrationWarning
@@ -89,7 +114,7 @@ export default function RootLayout({
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <SpeedInsights />
+        <SpeedInsightsDeferred />
       </body>
     </html>
   );
