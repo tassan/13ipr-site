@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Clock, CalendarDays, Bell } from "lucide-react";
 import { getAvisos, getCultos, getEventos } from "@/lib/queries";
 import SectionHeader from "@/components/ui/SectionHeader";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 // Static cultos fallback (editar no Sanity depois)
 const CULTOS_FALLBACK = [

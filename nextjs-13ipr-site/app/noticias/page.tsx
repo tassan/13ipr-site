@@ -6,6 +6,9 @@ import { Bell } from "lucide-react";
 export const metadata: Metadata = {
   title: "Notícias e Avisos",
   description: "Avisos, comunicados e notícias da IPR Cidade Nova.",
+  alternates: {
+    canonical: "/noticias",
+  },
 };
 
 export const revalidate = 60; // ISR: revalida a cada 60s

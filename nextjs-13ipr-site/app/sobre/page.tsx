@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "A Igreja",
   description:
     "Conheça a história, visão e missão da Igreja Presbiteriana Renovada – Cidade Nova, GV.",
+  alternates: {
+    canonical: "/sobre",
+  },
 };
 
 const valores = [

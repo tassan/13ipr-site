@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Contato",
   description:
     "Localização, horários e formas de contato da IPR Cidade Nova, Governador Valadares.",
+  alternates: {
+    canonical: "/contato",
+  },
 };
 
 const cultos = [
@@ -119,7 +122,7 @@ export default function ContatoPage() {
                       <Instagram size={13} /> @13iprcidadenova
                     </a>
                     <a
-                      href="https://youtube.com/@13iprcidadenova"
+                      href="https://www.youtube.com/@13IPR"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm font-light hover:text-gold transition-colors flex items-center gap-2"
@@ -166,7 +169,7 @@ export default function ContatoPage() {
 function ContactForm() {
   return (
     <form
-      action="https://formspree.io/f/XXXXXXXX"
+      action="#"
       method="POST"
       className="flex flex-col gap-4 font-sans"
     >

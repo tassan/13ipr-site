@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Pastores",
   description:
     "Conheça o Pr. Wilson Brito e o Pr. Uziel Pacheco, a liderança pastoral da IPR Cidade Nova.",
+  alternates: {
+    canonical: "/pastores",
+  },
 };
 
 export const revalidate = 60; // ISR: revalida a cada 60s

@@ -61,10 +61,10 @@ export default function Footer() {
             <li className="flex items-center gap-2">
               <Phone size={14} className="text-gold shrink-0" />
               <a
-                href="https://wa.me/55XXXXXXXXXXX"
+                href="https://wa.me/5533999168996"
                 className="hover:text-gold transition-colors"
               >
-                (33) XXXXX-XXXX
+                (33) 99916-8996
               </a>
             </li>
           </ul>
